@@ -1,0 +1,29 @@
+EDUSCAN QR OMR PRO 2026 — PAQUETE PWA PARA iPHONE
+
+CONTENIDO
+- index.html: aplicación móvil EduScan con generación de hojas OMR, descarga PDF, impresión, cámara/imagen para escaneo y calificación.
+- manifest.webmanifest: nombre, iconos y modo de aplicación independiente.
+- service-worker.js: caché básica de la aplicación para abrirla de nuevo sin conexión después de la primera carga.
+- icons/: iconos para pantalla de inicio y navegador.
+
+IMPORTANTE
+Este paquete está preparado para alojarse como sitio web seguro (HTTPS). No se puede instalar como PWA desde un archivo HTML abierto directamente (file://). La cámara y el registro del service worker necesitan HTTPS, salvo localhost.
+
+INSTALACIÓN EN iPHONE / iPAD
+1. Publica TODOS los archivos y carpetas de este paquete en el mismo directorio de un alojamiento HTTPS. No renombres ni separes los archivos.
+2. En el iPhone, abre la dirección HTTPS en Safari (no en un navegador integrado de otra app).
+3. Pulsa Compartir.
+4. Elige “Añadir a pantalla de inicio”. Si aparece, activa “Abrir como app web”.
+5. Pulsa “Añadir”. EduScan aparecerá como icono en la pantalla de inicio.
+6. Abre la app una vez con conexión para que el navegador almacene los archivos de la app.
+
+USO
+- Hojas imprimibles → “Descargar hojas en PDF” para crear el PDF, o “Imprimir hoja(s)” para abrir el diálogo de impresión.
+- Escáner OMR → selecciona una foto de la hoja o pulsa “Abrir cámara”; analiza las marcas y revisa las respuestas detectadas antes de calificar.
+- Datos y resultados se guardan localmente en el almacenamiento del navegador del dispositivo. Exporta periódicamente un respaldo JSON desde “Exportar respaldo”. Los datos locales no se sincronizan automáticamente entre equipos.
+
+NOTAS DE COMPATIBILIDAD
+- La generación de PDF de las hojas OMR se realiza en el navegador. Para informes, “Imprimir / guardar PDF” utiliza el diálogo de impresión/guardado del navegador.
+- En iOS, la impresión depende de las opciones del sistema y de una impresora compatible (por ejemplo, AirPrint).
+- La lectura OMR necesita buena iluminación, hoja plana y foto tomada de frente. Revisa siempre las marcas dudosas antes de guardar calificaciones.
+- El paquete no se ha probado en un iPhone físico en esta sesión. Se recomienda una prueba con la versión publicada antes de usarla con exámenes reales.
